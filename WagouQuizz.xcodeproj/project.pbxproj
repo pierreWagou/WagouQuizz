@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9350616230C8BCF0035861F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9350615230C8BCF0035861F /* Question.swift */; };
+		E9350618230C955F0035861F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9350617230C955F0035861F /* Game.swift */; };
+		E935061A230C99490035861F /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9350619230C99490035861F /* QuestionManager.swift */; };
 		E9A7DF9A230C5044006E8311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7DF99230C5044006E8311 /* AppDelegate.swift */; };
 		E9A7DF9C230C5044006E8311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7DF9B230C5044006E8311 /* ViewController.swift */; };
 		E9A7DF9F230C5044006E8311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A7DF9D230C5044006E8311 /* Main.storyboard */; };
 		E9A7DFA1230C5045006E8311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A7DFA0230C5045006E8311 /* Assets.xcassets */; };
 		E9A7DFA4230C5045006E8311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A7DFA2230C5045006E8311 /* LaunchScreen.storyboard */; };
+		E9A7DFAC230C81B9006E8311 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9A7DFAB230C81B9006E8311 /* Balham.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9350615230C8BCF0035861F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		E9350617230C955F0035861F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		E9350619230C99490035861F /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		E9A7DF96230C5044006E8311 /* WagouQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WagouQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A7DF99230C5044006E8311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9A7DF9B230C5044006E8311 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,7 @@
 		E9A7DFA0230C5045006E8311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9A7DFA3230C5045006E8311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9A7DFA5230C5045006E8311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9A7DFAB230C81B9006E8311 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9350611230C89490035861F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9350615230C8BCF0035861F /* Question.swift */,
+				E9350617230C955F0035861F /* Game.swift */,
+				E9350619230C99490035861F /* QuestionManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9350612230C898D0035861F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9A7DF9B230C5044006E8311 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9350613230C89A50035861F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9A7DF9D230C5044006E8311 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E9A7DF8D230C5044006E8311 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +89,13 @@
 			isa = PBXGroup;
 			children = (
 				E9A7DF99230C5044006E8311 /* AppDelegate.swift */,
-				E9A7DF9B230C5044006E8311 /* ViewController.swift */,
-				E9A7DF9D230C5044006E8311 /* Main.storyboard */,
+				E9A7DFAB230C81B9006E8311 /* Balham.otf */,
 				E9A7DFA0230C5045006E8311 /* Assets.xcassets */,
 				E9A7DFA2230C5045006E8311 /* LaunchScreen.storyboard */,
 				E9A7DFA5230C5045006E8311 /* Info.plist */,
+				E9350613230C89A50035861F /* View */,
+				E9350612230C898D0035861F /* Controller */,
+				E9350611230C89490035861F /* Model */,
 			);
 			path = WagouQuizz;
 			sourceTree = "<group>";
@@ -124,6 +160,7 @@
 			files = (
 				E9A7DFA4230C5045006E8311 /* LaunchScreen.storyboard in Resources */,
 				E9A7DFA1230C5045006E8311 /* Assets.xcassets in Resources */,
+				E9A7DFAC230C81B9006E8311 /* Balham.otf in Resources */,
 				E9A7DF9F230C5044006E8311 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9350616230C8BCF0035861F /* Question.swift in Sources */,
 				E9A7DF9C230C5044006E8311 /* ViewController.swift in Sources */,
 				E9A7DF9A230C5044006E8311 /* AppDelegate.swift in Sources */,
+				E935061A230C99490035861F /* QuestionManager.swift in Sources */,
+				E9350618230C955F0035861F /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
