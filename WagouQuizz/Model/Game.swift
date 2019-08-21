@@ -48,8 +48,8 @@ class Game {
         state = .over
     }
     
-    private func receiveQuestions(_ questions: [Question]) {
-        self.questions = questions
-        state = .ongoing
-    }
+//    private func receiveQuestions(_ questions: [Question]) {
+//        self.questions = questions
+//        state = .ongoing
+//    }
 }
