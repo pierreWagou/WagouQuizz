@@ -38,19 +38,24 @@
                                         <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="46"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75238883499999998" green="0.76848000289999996" blue="0.7843164802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="1aF-5a-zy5"/>
-                                    <constraint firstAttribute="width" secondItem="SFV-Kf-Usi" secondAttribute="height" multiplier="1:1" id="3iL-hQ-p1Y"/>
-                                    <constraint firstAttribute="width" constant="250" id="53i-Jt-qs4"/>
+                                    <constraint firstAttribute="height" constant="250" id="1aF-5a-zy5">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="250" id="53i-Jt-qs4">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    </constraint>
                                     <constraint firstItem="aHU-fo-Scl" firstAttribute="centerY" secondItem="SFV-Kf-Usi" secondAttribute="centerY" id="5eE-oQ-3vo"/>
                                     <constraint firstAttribute="trailing" secondItem="aHU-fo-Scl" secondAttribute="trailing" constant="8" id="91K-ko-oBO"/>
                                     <constraint firstAttribute="bottom" secondItem="XFC-l6-rJ5" secondAttribute="bottom" constant="8" id="NGf-Tj-gxY"/>
                                     <constraint firstItem="aHU-fo-Scl" firstAttribute="leading" secondItem="SFV-Kf-Usi" secondAttribute="leading" constant="8" id="OuY-Cy-EIV"/>
                                     <constraint firstItem="XFC-l6-rJ5" firstAttribute="centerX" secondItem="SFV-Kf-Usi" secondAttribute="centerX" id="gfE-Qr-UMK"/>
-                                    <constraint firstAttribute="width" constant="250" id="kkF-qd-nBp"/>
                                     <constraint firstItem="aHU-fo-Scl" firstAttribute="top" secondItem="SFV-Kf-Usi" secondAttribute="top" constant="8" id="t3v-LV-Sq9"/>
                                     <constraint firstAttribute="bottom" secondItem="aHU-fo-Scl" secondAttribute="bottom" constant="8" id="zb6-ag-JsN"/>
                                 </constraints>
@@ -61,7 +66,6 @@
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <exclude reference="kkF-qd-nBp"/>
                                         <include reference="5eE-oQ-3vo"/>
                                     </mask>
                                 </variation>
@@ -75,8 +79,12 @@
                                 <color key="backgroundColor" red="0.40506663920000002" green="0.55069696899999998" blue="0.76472908260000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="O77-rw-CyY"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="SAH-f6-XUE"/>
-                                    <constraint firstAttribute="height" constant="80" id="wCP-7Y-mgw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="SAH-f6-XUE">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="80" id="wCP-7Y-mgw">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
                                 <state key="normal" title="New Game">
@@ -91,6 +99,9 @@
                                     <mask key="constraints">
                                         <include reference="O77-rw-CyY"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="46"/>
                                 </variation>
                                 <connections>
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FV-7t-23y"/>
@@ -114,6 +125,9 @@
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="46"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.35837835070000001" green="0.41881719229999997" blue="0.50197100640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
