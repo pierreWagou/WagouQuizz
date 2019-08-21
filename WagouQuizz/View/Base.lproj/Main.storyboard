@@ -23,22 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6a1-Dt-tT1">
-                                <rect key="frame" x="169" y="588.5" width="37" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="YEH-yb-CfG"/>
-                                    <constraint firstAttribute="height" constant="37" id="yaQ-D4-cUz"/>
-                                </constraints>
-                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFV-Kf-Usi" customClass="QuestionView" customModule="WagouQuizz" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="20" width="250" height="250"/>
+                                <rect key="frame" x="62.5" y="40" width="250" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the Marsupilami hidding ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-fo-Scl">
-                                        <rect key="frame" x="8" y="8" width="234" height="234"/>
-                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="XFC-l6-rJ5">
                                         <rect key="frame" x="107" y="207" width="36" height="35"/>
                                         <constraints>
@@ -46,27 +33,36 @@
                                             <constraint firstAttribute="width" secondItem="XFC-l6-rJ5" secondAttribute="height" multiplier="36:35" id="rhP-31-8Ck"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the Marsupilami hidding ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-fo-Scl">
+                                        <rect key="frame" x="8" y="8" width="234" height="234"/>
+                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75238883499999998" green="0.76848000289999996" blue="0.7843164802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1aF-5a-zy5"/>
                                     <constraint firstAttribute="width" secondItem="SFV-Kf-Usi" secondAttribute="height" multiplier="1:1" id="3iL-hQ-p1Y"/>
+                                    <constraint firstAttribute="width" constant="250" id="53i-Jt-qs4"/>
+                                    <constraint firstItem="aHU-fo-Scl" firstAttribute="centerY" secondItem="SFV-Kf-Usi" secondAttribute="centerY" id="5eE-oQ-3vo"/>
                                     <constraint firstAttribute="trailing" secondItem="aHU-fo-Scl" secondAttribute="trailing" constant="8" id="91K-ko-oBO"/>
                                     <constraint firstAttribute="bottom" secondItem="XFC-l6-rJ5" secondAttribute="bottom" constant="8" id="NGf-Tj-gxY"/>
                                     <constraint firstItem="aHU-fo-Scl" firstAttribute="leading" secondItem="SFV-Kf-Usi" secondAttribute="leading" constant="8" id="OuY-Cy-EIV"/>
                                     <constraint firstItem="XFC-l6-rJ5" firstAttribute="centerX" secondItem="SFV-Kf-Usi" secondAttribute="centerX" id="gfE-Qr-UMK"/>
-                                    <constraint firstItem="aHU-fo-Scl" firstAttribute="centerY" secondItem="SFV-Kf-Usi" secondAttribute="centerY" id="guR-Er-7VR"/>
                                     <constraint firstAttribute="width" constant="250" id="kkF-qd-nBp"/>
                                     <constraint firstItem="aHU-fo-Scl" firstAttribute="top" secondItem="SFV-Kf-Usi" secondAttribute="top" constant="8" id="t3v-LV-Sq9"/>
                                     <constraint firstAttribute="bottom" secondItem="aHU-fo-Scl" secondAttribute="bottom" constant="8" id="zb6-ag-JsN"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="guR-Er-7VR"/>
+                                        <exclude reference="5eE-oQ-3vo"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <include reference="guR-Er-7VR"/>
+                                        <exclude reference="kkF-qd-nBp"/>
+                                        <include reference="5eE-oQ-3vo"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -74,8 +70,41 @@
                                     <outlet property="label" destination="aHU-fo-Scl" id="93A-yA-ek7"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4y-oW-lRJ">
+                                <rect key="frame" x="87.5" y="567" width="200" height="80"/>
+                                <color key="backgroundColor" red="0.40506663920000002" green="0.55069696899999998" blue="0.76472908260000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="O77-rw-CyY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="SAH-f6-XUE"/>
+                                    <constraint firstAttribute="height" constant="80" id="wCP-7Y-mgw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="O77-rw-CyY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="O77-rw-CyY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FV-7t-23y"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6a1-Dt-tT1">
+                                <rect key="frame" x="169" y="588.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="YEH-yb-CfG"/>
+                                    <constraint firstAttribute="height" constant="37" id="yaQ-D4-cUz"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d6-gA-iCK">
-                                <rect key="frame" x="16" y="278" width="343" height="60"/>
+                                <rect key="frame" x="62.5" y="316" width="250" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="9ao-iE-IgO">
                                         <variation key="heightClass=compact" constant="200"/>
@@ -86,52 +115,52 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4y-oW-lRJ">
-                                <rect key="frame" x="87.5" y="567" width="200" height="80"/>
-                                <color key="backgroundColor" red="0.40506663920000002" green="0.55069696899999998" blue="0.76472908260000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="SAH-f6-XUE"/>
-                                    <constraint firstAttribute="height" constant="80" id="wCP-7Y-mgw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
-                                <state key="normal" title="New Game">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FV-7t-23y"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35837835070000001" green="0.41881719229999997" blue="0.50197100640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="v4y-oW-lRJ" secondAttribute="bottom" constant="20" id="6NN-fv-I7m"/>
-                            <constraint firstItem="SFV-Kf-Usi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LLV-up-lE5">
-                                <variation key="heightClass=compact" constant="62"/>
+                            <constraint firstAttribute="bottom" secondItem="v4y-oW-lRJ" secondAttribute="bottom" constant="20" id="6NN-fv-I7m">
+                                <variation key="heightClass=compact" constant="63"/>
                             </constraint>
-                            <constraint firstItem="SFV-Kf-Usi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TCu-h0-rkf"/>
-                            <constraint firstItem="SFV-Kf-Usi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VmR-AL-UbX"/>
+                            <constraint firstItem="5d6-gA-iCK" firstAttribute="top" secondItem="SFV-Kf-Usi" secondAttribute="bottom" constant="26" id="7Bo-Qx-a4C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v4y-oW-lRJ" secondAttribute="trailing" constant="20" id="7fE-Yo-QRb"/>
+                            <constraint firstItem="SFV-Kf-Usi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Aq4-3t-no4"/>
+                            <constraint firstItem="SFV-Kf-Usi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jb2-qd-fWa"/>
+                            <constraint firstItem="5d6-gA-iCK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SFV-Kf-Usi" secondAttribute="trailing" constant="8" symbolic="YES" id="LA4-I7-8AK"/>
+                            <constraint firstItem="SFV-Kf-Usi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QUs-xu-HBn"/>
+                            <constraint firstItem="v4y-oW-lRJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VcE-Oh-a6C"/>
                             <constraint firstItem="6a1-Dt-tT1" firstAttribute="centerX" secondItem="v4y-oW-lRJ" secondAttribute="centerX" id="eEz-JB-2lo"/>
-                            <constraint firstItem="5d6-gA-iCK" firstAttribute="top" secondItem="SFV-Kf-Usi" secondAttribute="bottom" constant="8" id="gpE-9j-NOq">
-                                <variation key="heightClass=compact" constant="-250"/>
+                            <constraint firstItem="5d6-gA-iCK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="irF-Oi-kf3"/>
+                            <constraint firstItem="5d6-gA-iCK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nlx-6k-EpN">
+                                <variation key="heightClass=compact" constant="223.5"/>
                             </constraint>
-                            <constraint firstAttribute="trailing" secondItem="5d6-gA-iCK" secondAttribute="trailing" constant="16" id="nCe-Jh-maU"/>
-                            <constraint firstItem="5d6-gA-iCK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nlx-6k-EpN"/>
-                            <constraint firstItem="SFV-Kf-Usi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o7D-qP-6LY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5d6-gA-iCK" secondAttribute="trailing" constant="20" id="oaY-Cp-XiE"/>
                             <constraint firstItem="6a1-Dt-tT1" firstAttribute="centerY" secondItem="v4y-oW-lRJ" secondAttribute="centerY" id="pl1-ho-67k"/>
-                            <constraint firstItem="v4y-oW-lRJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wiZ-Om-deL"/>
+                            <constraint firstItem="SFV-Kf-Usi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="q3s-BO-Wt8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="TCu-h0-rkf"/>
-                                <exclude reference="o7D-qP-6LY"/>
+                                <exclude reference="7fE-Yo-QRb"/>
+                                <exclude reference="oaY-Cp-XiE"/>
+                                <exclude reference="Aq4-3t-no4"/>
+                                <exclude reference="QUs-xu-HBn"/>
+                                <exclude reference="LA4-I7-8AK"/>
+                                <exclude reference="irF-Oi-kf3"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <exclude reference="LLV-up-lE5"/>
-                                <include reference="TCu-h0-rkf"/>
-                                <include reference="o7D-qP-6LY"/>
+                                <include reference="7fE-Yo-QRb"/>
+                                <include reference="oaY-Cp-XiE"/>
+                                <include reference="Aq4-3t-no4"/>
+                                <exclude reference="Jb2-qd-fWa"/>
+                                <include reference="QUs-xu-HBn"/>
+                                <exclude reference="q3s-BO-Wt8"/>
+                                <exclude reference="7Bo-Qx-a4C"/>
+                                <include reference="LA4-I7-8AK"/>
+                                <include reference="irF-Oi-kf3"/>
+                                <exclude reference="nlx-6k-EpN"/>
+                                <exclude reference="VcE-Oh-a6C"/>
                             </mask>
                         </variation>
                     </view>
@@ -144,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55.200000000000003" y="31.03448275862069"/>
+            <point key="canvasLocation" x="-55.322338830584712" y="29.600000000000001"/>
         </scene>
     </scenes>
     <resources>
