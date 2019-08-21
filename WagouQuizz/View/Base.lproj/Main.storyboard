@@ -105,6 +105,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="6a1-Dt-tT1" id="SyW-aX-faw"/>
                         <outlet property="newGameButton" destination="v4y-oW-lRJ" id="TRg-8G-mFf"/>
+                        <outlet property="questionView" destination="SFV-Kf-Usi" id="LEH-P6-nl8"/>
                         <outlet property="scoreLabel" destination="5d6-gA-iCK" id="Qqg-Pq-fwK"/>
                     </connections>
                 </viewController>

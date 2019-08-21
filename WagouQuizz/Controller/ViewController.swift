@@ -9,6 +9,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionView: QuestionView!
     
+    
     @IBAction func didTapNewGameButton() {
         startNewGame()
     }
@@ -19,6 +20,9 @@ class ViewController: UIViewController {
         questionView.title = "Loading..."
         questionView.style = .standard
         scoreLabel.text = "0 / 10"
+        UIView.animate(withDuration: 1, animations: ({
+            self.scoreLabel.transform = CGAffineTransform(rotationAngle: 0)
+        }))
         
         game.refresh()
         
@@ -122,7 +126,7 @@ class ViewController: UIViewController {
         let name = Notification.Name(rawValue: "QuestionsLoaded")
         NotificationCenter.default.addObserver(self, selector: #selector(questionsLoaded), name: name, object: nil)
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
-        questionView.addGestureRecognizer(panGestureRecognizer)
+    questionView.addGestureRecognizer(panGestureRecognizer)
         
         startNewGame()
     }
